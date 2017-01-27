@@ -46,7 +46,7 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  if /^[01]*(00)$/.match(s) || s == "0"
+  if /^[01]*(00)$/.match(s) || s === "0"
     return true
   else
     return false
@@ -57,24 +57,24 @@ end
 
 class BookInStock
   def initialize isbn price
-   @isbn=isbn  
-   @price=price  
-     if(@isbn===""||@price<=0)
+   @isbn = isbn  
+   @price = price  
+     if(@isbn === "" || @price<=0)
         raise ArgumentError  
      end  
    end  
   
   #setter and getter for isbn and price  
   def set_isbn(isbn)  
-    @isbn=isbn  
-    if(@isbn==="")  
+    @isbn = isbn  
+    if @isbn === ""  
       raise ArgumentError  
     end  
   end  
   
   def set_price(price)  
-    @price=price  
-    if(@price<=0)  
+    @price = price  
+    if @price <= 0  
       raise ArgumentError  
     end  
   end  
