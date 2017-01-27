@@ -11,13 +11,13 @@ def sum array
 end
 
 def max_2_sum array
-  if arr.empty?
+  if array.empty?
     return 0
-  elsif arr.length == 1
-    return arr[0]
+  elsif array.length == 1
+    return array[0]
   else
-    arr.sort! 
-    return arr[arr.length - 1] + arr[arr.length - 2]
+    array.sort! 
+    return array[array.length - 1] + array[array.length - 2]
   end
 end
 
@@ -25,7 +25,7 @@ def sum_to_n? array, n
   if array.empty? && n == 0
     return true
   else
-    arr.combination(2).any? {|a, b| a + b == n }
+    array.combination(2).any? {|a, b| a + b == n }
   end
 end
 
